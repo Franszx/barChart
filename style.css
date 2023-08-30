@@ -1,0 +1,162 @@
+html {
+  --primary-color: #f2f2f2;
+  --second-color: #d9baba;
+  --third-color: #8c5656;
+  --four-color: #f25c05;
+  --five-color: #f27405;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: system-ui;
+
+  margin: 0;
+  padding: 1em;
+  background-color: var(--primary-color);
+}
+.first_div {
+  background-color: var(--third-color);
+  border: solid var(--four-color) 2rem;
+  border-radius: 2rem;
+  border-inline: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  font-family: system-ui;
+
+  margin: 2em 0 0 0;
+  padding: 2em;
+  vertical-align: left;
+}
+ul {
+  list-style: none;
+  display: flex;
+  align-items: flex-end;
+  gap: 1ch;
+  block-size: 100px;
+  padding: 0;
+  margin: 0;
+  width: 40em;
+  background-color: var(--second-color);
+  border: 10px var(--second-color) solid;
+  height: 8rem;
+  border-start-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+}
+
+li {
+  /* --height: 40; */
+  inline-size: 3ch;
+  height: calc(var(--height) * 1px);
+  background: color-mix(in hsl, #d9baba, #8c5656 calc(var(--height) * 2%));
+  width: 20px;
+  margin: 0 2px;
+}
+
+* {
+  box-sizing: border-box;
+}
+.spacer {
+  height: 2rem;
+  width: 2rem;
+  color: gainsboro;
+}
+
+.barChart {
+  color: var(--second-color);
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+  font-stretch: ultra-condensed;
+  font-size: 7rem;
+  margin-bottom: -0.25em;
+}
+.kunde_his {
+  font-size: 4em;
+  font-weight: 900;
+  font-stretch: extra-condensed;
+  color: var(--second-color);
+  padding: 0;
+  margin: 0;
+}
+
+/* -------------------- media -------------------------- */
+@media (min-width: 1500px) {
+  .first_div {
+    background-color: var(--third-color);
+    border: solid var(--four-color) 2rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    font-family: system-ui;
+    border-inline: 0.5rem;
+    margin: 0;
+    padding: 2em;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    gap: 1ch;
+    block-size: 100px;
+    padding: 0;
+    margin: 0;
+    width: 60em;
+    background-color: var(--second-color);
+    border: 10px var(--second-color) solid;
+    border-start-end-radius: 1rem;
+    border-start-start-radius: 1rem;
+    height: 10rem;
+  }
+
+  li {
+    /* --height: 40; */
+    inline-size: 3ch;
+    height: calc(var(--height) * 1px);
+    background: color-mix(in hsl, #d9baba, #8c5656 calc(var(--height) * 2%));
+    width: 50px;
+    margin: 0 2px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  .spacer {
+    height: 2rem;
+    width: 2rem;
+    color: gainsboro;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: system-ui;
+    /* line-height: 1.5; */
+    margin: 0;
+    padding: 2em;
+    background-color: var(--primary-color);
+  }
+  .barChart {
+    color: var(--second-color);
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -0.35em;
+    font-stretch: ultra-condensed;
+    font-size: 10rem;
+    margin-left: -0.03em;
+  }
+  .kunde_his {
+    font-size: 8em;
+    font-weight: 900;
+    font-stretch: extra-condensed;
+    color: var(--second-color);
+    padding: 0;
+    margin: 0;
+    margin-left: -0.038em;
+  }
+}

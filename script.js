@@ -13,7 +13,9 @@ function generateRandomNumber(min, max) {
 function generateListItem(numCustomers) {
   const li = document.createElement("li");
   const randomHeight = (numCustomers / 100) * 100;
+  const standardWidth = "50px";
   li.style.setProperty("--height", randomHeight);
+  li.style.width = standardWidth;
 
   list.appendChild(li);
 

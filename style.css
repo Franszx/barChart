@@ -1,9 +1,21 @@
 html {
-  --primary-color: #f2f2f2;
-  --second-color: #d9baba;
-  --third-color: #8c5656;
-  --four-color: #f25c05;
-  --five-color: #f27405;
+  --primary-color: #4178bf;
+  --second-color: #66b1f2;
+  --third-color: #f0f1f2;
+  --four-color: #bf877a;
+  --five-color: #0d0d0d;
+
+  /* --------------------- */
+
+  --new-color-1: #7ab3bf;
+  --new-color-2: #f2efdf;
+  --new-color-3: #734439;
+  --new-color-4: #bf8173;
+  --new-color-5: #a65851;
+}
+html,
+body {
+  overflow: hidden;
 }
 
 body {
@@ -11,24 +23,22 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: system-ui;
-
   margin: 0;
   padding: 1em;
-  background-color: var(--primary-color);
+  background-color: var(--new-color-2);
+  overflow: hidden;
 }
 .first_div {
-  background-color: var(--third-color);
-  border: solid var(--four-color) 2rem;
+  background-color: var(--new-color-2);
+  border: solid var(--new-color-1) 2rem;
   border-radius: 2rem;
-  border-inline: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: first baseline;
   font-family: system-ui;
-
   margin: 2em 0 0 0;
   padding: 2em;
-  vertical-align: left;
+  overflow: hidden;
 }
 ul {
   list-style: none;
@@ -39,8 +49,8 @@ ul {
   padding: 0;
   margin: 0;
   width: 40em;
-  background-color: var(--second-color);
-  border: 10px var(--second-color) solid;
+  background-color: var(--new-color-2);
+  border: 10px var(--new-color-1) solid;
   height: 8rem;
   border-start-end-radius: 1rem;
   border-start-start-radius: 1rem;
@@ -50,8 +60,8 @@ li {
   /* --height: 40; */
   inline-size: 3ch;
   height: calc(var(--height) * 1px);
-  background: color-mix(in hsl, #d9baba, #8c5656 calc(var(--height) * 2%));
-  width: 20px;
+  background: color-mix(in hsl, #a65851, #bf8173 calc(var(--height) * 2%));
+  width: 2px;
   margin: 0 2px;
 }
 
@@ -65,7 +75,7 @@ li {
 }
 
 .barChart {
-  color: var(--second-color);
+  color: var(--new-color-3);
   font-weight: 900;
   margin: 0;
   padding: 0;
@@ -77,24 +87,31 @@ li {
   font-size: 4em;
   font-weight: 900;
   font-stretch: extra-condensed;
-  color: var(--second-color);
+  color: var(--new-color-3);
   padding: 0;
   margin: 0;
 }
-
+.bottom_line {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.7em;
+}
 /* -------------------- media -------------------------- */
 @media (min-width: 1500px) {
+  html,
+  body {
+    overflow: hidden;
+  }
   .first_div {
-    background-color: var(--third-color);
-    border: solid var(--four-color) 2rem;
+    background-color: var(--new-color-2);
+    border: solid var(--new-color-1) 2rem;
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
     align-items: first baseline;
     font-family: system-ui;
-    border-inline: 0.5rem;
     margin: 0;
     padding: 2em;
+    overflow: hidden;
   }
   ul {
     list-style: none;
@@ -105,18 +122,17 @@ li {
     padding: 0;
     margin: 0;
     width: 60em;
-    background-color: var(--second-color);
-    border: 10px var(--second-color) solid;
+    background-color: var(--new-color-2);
+    border: 10px var(--new-color-1) solid;
     border-start-end-radius: 1rem;
     border-start-start-radius: 1rem;
     height: 10rem;
   }
 
   li {
-    /* --height: 40; */
     inline-size: 3ch;
     height: calc(var(--height) * 1px);
-    background: color-mix(in hsl, #d9baba, #8c5656 calc(var(--height) * 2%));
+    background: color-mix(in hsl, #a65851, #bf8173 calc(var(--height) * 2%));
     width: 50px;
     margin: 0 2px;
   }
@@ -127,7 +143,6 @@ li {
   .spacer {
     height: 2rem;
     width: 2rem;
-    color: gainsboro;
   }
 
   body {
@@ -135,13 +150,14 @@ li {
     flex-direction: column;
     align-items: center;
     font-family: system-ui;
-    /* line-height: 1.5; */
-    margin: 0;
+    margin: 10em 0 0 0;
     padding: 2em;
-    background-color: var(--primary-color);
+    background-color: var(--new-color-2);
+    overflow: hidden;
+    width: 100vw;
   }
   .barChart {
-    color: var(--second-color);
+    color: var(--new-color-3);
     font-weight: 900;
     margin: 0;
     padding: 0;
@@ -154,9 +170,13 @@ li {
     font-size: 8em;
     font-weight: 900;
     font-stretch: extra-condensed;
-    color: var(--second-color);
+    color: var(--new-color-3);
     padding: 0;
     margin: 0;
     margin-left: -0.038em;
+  }
+  .bottom_line {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.7em;
   }
 }
